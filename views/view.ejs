@@ -1,0 +1,12 @@
+<%- include("partials/header.ejs") %>
+
+<img id="view-post-image" src=<%=post.image%>>
+<h1><%=post.title%></h1>
+<% var paragraphs = post.body.split("\n"); %>
+<div id="view-post-body">
+    <% paragraphs.forEach((text, idx) => { %>
+        <p><%= text %></p>
+    <% }); %>
+</div>
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,107 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Gidole", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+footer {
+    position: absolute;
+    bottom: -10px;
+    text-align: center;
+    width: 100%;
+    background-color: #3C5B6F;
+}
+
+button {
+    font-family: "Gidole", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+.post-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.post-form-h1 {
+    margin-bottom: 0;
+}
+.post-form > * {
+    padding: 5px;
+}
+.post-form > label {
+     margin-top: 20px;
+}
+.submit-post {
+    margin-top: 20px;
+}
+
+/* Post formatting on home page */
+.post-container {
+    display: grid;
+    grid-template-columns: minmax(125px, 250px) minmax(125px, 250px) minmax(375px, 750px);
+    grid-template-rows: 1fr 1fr .25fr;
+    margin-top: 50px;
+    gap: 20px;
+    justify-self: center;
+    width: 80%;
+}
+.post-container > a {
+    text-decoration: none;
+    color: black;
+}
+.post-img {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.post-title {
+    grid-column: 3 / 3;
+    grid-row: 1 / 2;
+}
+.post-body {
+    grid-column: 3 / 3;
+    grid-row: 2 / 3;
+}
+.edit-button {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+.delete-button {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+button, .submit-post {
+    background-color: #DFD0B8;
+    border-color: #948979;
+}
+button:hover, .submit-post:hover {
+    background-color: #948979;
+}
+
+#view-post-body {
+    width: 70%;
+}
+#view-post-image {
+    width: 50%;
+    margin-top: 100px;
+}

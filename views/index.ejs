@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+
+<% if (locals.posts) { %>
+    <div id="posts-section">
+        <% posts.forEach((post, idx) => { %>
+            <container class="post-container">
+                <a href="/view?id=<%= idx %>" class="post-img"><img src="<%=post.image%>" class="post-img" href="/view"></a>
+                <h1 class="post-title"><%= post.title %></h1>
+                <p class="post-body"><%= post.body.slice(0, 375) %></p>
+                <button  type="button" class="edit-button" onclick="location.href='/edit?id=<%=idx%>'">Edit</button>
+                <button  type="button" class="delete-button" onclick="location.href='/delete_post?id=<%=idx%>'">Delete</button>
+            </container>
+        <% }) %>
+    </div>
+<% } %>
+
+<%- include("partials/footer.ejs") %>
